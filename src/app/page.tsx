@@ -61,7 +61,13 @@ export default function HomePage() {
             <code className="rounded-md bg-white/[0.06] px-1.5 py-0.5 font-mono text-sm text-[var(--foreground)]/85">
               /[slug]
             </code>
-            . Il preset (Atleti, Performance, Apple, Nike) si imposta nel JSON.
+            . Il preset (Atleti, Performance, Apple, Nike) si imposta nel JSON            . Con{" "}
+            <code className="rounded-md bg-white/[0.06] px-1.5 py-0.5 font-mono text-sm text-[var(--foreground)]/85">
+              site
+            </code>{" "}
+            colleghi il sottodominio su Katahero (es.{" "}
+            <span className="font-mono text-[var(--foreground)]/70">matteorizzi.katahero.com</span>) e
+            l&apos;URL canonico.
           </p>
         </header>
 
@@ -89,6 +95,11 @@ export default function HomePage() {
                     <span className="mt-1 font-mono text-sm tabular-nums text-[var(--foreground)]/50">
                       #{data.header.number} · /{slug}
                     </span>
+                    {data.site?.canonicalUrl ? (
+                      <span className="mt-3 line-clamp-2 break-all text-xs text-[var(--foreground)]/40">
+                        {data.site.canonicalUrl}
+                      </span>
+                    ) : null}
                   </Link>
                 </li>
               );

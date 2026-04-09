@@ -4,11 +4,6 @@ import type { AthleteData } from "@/types/athlete";
 
 const DATA_DIR = path.join(process.cwd(), "src/data");
 
-export function getDefaultAthlete(): AthleteData {
-  const raw = fs.readFileSync(path.join(DATA_DIR, "athlete.json"), "utf8");
-  return JSON.parse(raw) as AthleteData;
-}
-
 export function getAthleteSlugs(): string[] {
   const dir = path.join(DATA_DIR, "athletes");
   if (!fs.existsSync(dir)) return [];

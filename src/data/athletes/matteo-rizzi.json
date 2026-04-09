@@ -7,6 +7,10 @@
     "title": "Matteo Rizzi #11 · Sito ufficiale",
     "description": "Sito ufficiale di Matteo Rizzi — highlights, statistiche, storia e social."
   },
+  "site": {
+    "canonicalUrl": "https://matteorizzi.katahero.com",
+    "hosts": ["matteorizzi.katahero.com"]
+  },
   "header": {
     "avatarUrl": "https://images.unsplash.com/photo-1627627256672-027a4613dd05?w=200&h=200&fit=crop",
     "name": "Matteo Rizzi",

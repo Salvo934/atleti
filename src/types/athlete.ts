@@ -143,9 +143,26 @@ export type NavItem = {
   label: string;
 };
 
+/** Dove è raggiungibile il sito dell’atleta (SEO + routing per host). */
+export type SiteConfig = {
+  /**
+   * URL canonico pubblico (https://…). Usato per metadata e link assoluti.
+   * Sostituisci con il dominio reale in produzione.
+   */
+  canonicalUrl?: string;
+  /**
+   * Host HTTP che devono mostrare questo atleta alla root `/` (rewrite → `/[slug]`).
+   * Su Katahero: sottodominio `atleta.katahero.com` (es. `matteorizzi.katahero.com`), senza schema né porta.
+   * In locale: aggiungi la stessa riga in /etc/hosts verso 127.0.0.1 per testare il middleware.
+   */
+  hosts?: string[];
+};
+
 export type AthleteData = {
   slug: string;
   meta: AthleteMeta;
+  /** Opzionale: dominio/sottodominio e URL canonico per collegare il sito all’atleta. */
+  site?: SiteConfig;
   /** Omesso = `atleti` (ibrido Apple + Nike: tipografia pulita, accent energico). */
   theme?: {
     preset: ThemePreset;

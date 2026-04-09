@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AthleteView } from "@/components/athlete/AthleteView";
+import { resolveAthleteSiteMetadata } from "@/lib/athleteMetadata";
 import { getAthleteBySlug, getAthleteSlugs } from "@/lib/loadAthlete";
 
 type Props = {
@@ -18,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: data.meta.title,
     description: data.meta.description,
+    ...resolveAthleteSiteMetadata(data),
   };
 }
 
