@@ -1,0 +1,285 @@
+{
+  "slug": "matteo-rizzi",
+  "theme": {
+    "preset": "apple"
+  },
+  "meta": {
+    "title": "Matteo Rizzi #11 · Sito ufficiale",
+    "description": "Sito ufficiale di Matteo Rizzi — highlights, statistiche, storia e social."
+  },
+  "header": {
+    "avatarUrl": "https://images.unsplash.com/photo-1627627256672-027a4613dd05?w=200&h=200&fit=crop",
+    "name": "Matteo Rizzi",
+    "number": 11
+  },
+  "hero": {
+    "tagline": "Basketball · Shooting Guard",
+    "name": "Matteo Rizzi",
+    "number": 11,
+    "subtitle": "Giocatore · anno 2002 · 196 cm · 92 kg",
+    "roleLine": "Tiratore · #11",
+    "media": {
+      "type": "image",
+      "src": "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb6?w=1280&h=720&fit=crop&q=75&auto=format",
+      "alt": "Matteo Rizzi in azione"
+    },
+    "primaryCta": {
+      "label": "Guarda gli highlights",
+      "href": "#highlights"
+    },
+    "secondaryCta": {
+      "label": "Maglia ufficiale",
+      "href": "#shop"
+    }
+  },
+  "ticker": {
+    "messages": [
+      "PPG 12.4",
+      "AST 3.1",
+      "REB 4.2",
+      "3PT% 38.2",
+      "Clutch time",
+      "Olimpia Milano Academy"
+    ]
+  },
+  "summaryStats": [
+    { "label": "PPG", "value": "12.4" },
+    { "label": "AST", "value": "3.1" },
+    { "label": "REB", "value": "4.2" },
+    { "label": "3PT%", "value": "38.2" }
+  ],
+  "highlights": {
+    "sectionLabel": "01",
+    "title": "Highlights",
+    "subtitle": "I video dal canale YouTube.",
+    "featuredTitle": "Triple e transizioni",
+    "featuredDescription": "Selezioni di tiri dalla lunga, attacchi in contropiede e letture in pick-and-roll: il gioco moderno di una guardia che vuole incidere ogni possesso.",
+    "videos": [
+      {
+        "title": "Highlight YouTube",
+        "description": "Guarda il video su YouTube.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=JYJfGWHTEho"
+      },
+      {
+        "title": "Highlight YouTube",
+        "description": "Guarda il video su YouTube.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Zvu_SEi4XdU"
+      }
+    ]
+  },
+  "stats": {
+    "sectionLabel": "02",
+    "title": "Statistiche",
+    "subtitle": "I numeri della stagione.",
+    "lastGames": {
+      "title": "Last 5 games",
+      "columns": ["Date", "Opp", "Score", "MIN", "PTS", "REB", "AST", "EFF"],
+      "rows": [
+        ["Mar 1, 2026", "vs TOR", "91-88", "2", "10", "5", "4", "22"],
+        ["Feb 22, 2026", "@ VEN", "76-82", "28", "14", "3", "6", "18"],
+        ["Feb 15, 2026", "vs REG", "84-79", "30", "22", "6", "2", "24"],
+        ["Feb 8, 2026", "@ BOL", "70-75", "26", "9", "4", "3", "12"],
+        ["Feb 1, 2026", "vs COM", "88-81", "34", "16", "7", "5", "21"]
+      ]
+    },
+    "regularSeason": {
+      "title": "Regular Season Stats",
+      "columns": [
+        "SEASON",
+        "TEAM",
+        "LEAGUE",
+        "PTS",
+        "REB",
+        "AST",
+        "GP",
+        "MIN",
+        "FG%",
+        "3%",
+        "1%",
+        "OR",
+        "DR",
+        "STL",
+        "TO",
+        "BLK",
+        "FO",
+        "EFF"
+      ],
+      "rows": [
+        [
+          "23-24",
+          "Treviso Basket",
+          "Serie B",
+          8.2,
+          3.1,
+          2.4,
+          26,
+          22.4,
+          42.1,
+          35.0,
+          78.0,
+          0.6,
+          2.5,
+          0.9,
+          1.8,
+          0.1,
+          2.1,
+          9.2
+        ],
+        [
+          "25-26",
+          "Olimpia Milano Academy",
+          "ITA-3",
+          12.4,
+          4.2,
+          3.1,
+          19,
+          29.1,
+          44.8,
+          38.2,
+          82.4,
+          1.0,
+          3.2,
+          1.1,
+          2.4,
+          0.2,
+          2.4,
+          14.8
+        ]
+      ]
+    }
+  },
+  "gallery": {
+    "sectionLabel": "03",
+    "title": "Foto",
+    "subtitle": "Esempio galleria: 5 foto in fila — scroll orizzontale manuale. Aggiungi o rimuovi oggetti in images[].",
+    "images": [
+      {
+        "src": "https://images.unsplash.com/photo-1627627256672-027a4613dd05?w=900&h=675&fit=crop",
+        "alt": "01 — Riscaldamento e tiro"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb6?w=900&h=675&fit=crop",
+        "alt": "02 — Palla a due"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&h=675&fit=crop",
+        "alt": "03 — Vista parquet"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1519861537743-0b0c70248958?w=900&h=675&fit=crop",
+        "alt": "04 — Gioco in transizione"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1515523110800-9415d696b2df?w=900&h=675&fit=crop",
+        "alt": "05 — Dettaglio palla"
+      }
+    ]
+  },
+  "story": {
+    "sectionLabel": "04",
+    "title": "Storia",
+    "subtitle": "Da Milano al perimetro nazionale: formazione, scelte e obiettivi.",
+    "paragraphs": [
+      "Sono Matteo Rizzi, nato nel 2002 a Milano. Gioco come guardia tiratrice: sono alto 196 cm per 92 kg, con un profilo orientato al tiro da tre punti e alle situazioni di clutch.",
+      "Ho iniziato nel minibasket locale, poi ho scelto un percorso strutturato nel vivaio di una realtà importante, dove ho imparato disciplina tattica e cura dei dettagli.",
+      "Negli anni ho alternato esperienze in campionati regionali e nazionali giovanili, con convocazioni in selezioni territoriali che mi hanno spinto a lavorare su consistenza e mentalità.",
+      "Il passaggio al basket senior è stato un salto di ritmo: minuti più competitivi, decisioni più rapide e la necessità di essere utile anche senza segnare.",
+      "Oggi mi alleno ogni giorno per migliorare difesa sulle linee, piedi in movimento e lettura dei blocchi: credo nel gioco di squadra come strumento per vincere.",
+      "Il mio obiettivo è consolidare numeri stabili in categorie nazionali e costruire un profilo da professionista, con etica del lavoro e rispetto per la maglia. 🏀"
+    ]
+  },
+  "clubs": {
+    "sectionLabel": "05",
+    "title": "Club",
+    "subtitle": "Le tappe della carriera fin qui.",
+    "clubs": [
+      {
+        "team": "Minibasket Milano",
+        "logo": "/clubs/minibasket-milano.png",
+        "years": "Giovanili",
+        "league": "Locale",
+        "description": "Prime basi tecniche e passione per il gioco."
+      },
+      {
+        "team": "Treviso Basket",
+        "logo": "/clubs/treviso-basket.png",
+        "years": "2023/24",
+        "league": "Serie B",
+        "description": "Prima esperienza senior e minuti in crescita."
+      },
+      {
+        "team": "Olimpia Milano Academy",
+        "logo": "/clubs/olimpia-milano-academy.png",
+        "years": "2025+",
+        "league": "ITA-3",
+        "description": "Contesto formativo ad alto livello."
+      }
+    ]
+  },
+  "interviews": {
+    "sectionLabel": "06",
+    "title": "Interviste",
+    "subtitle": "Le parole dietro le prestazioni.",
+    "interviews": [
+      {
+        "title": "Intervista su YouTube",
+        "subtitle": "Guarda il video completo su YouTube.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Zvu_SEi4XdU"
+      },
+      {
+        "title": "Intervista su YouTube",
+        "subtitle": "Guarda il video completo su YouTube.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=JYJfGWHTEho"
+      }
+    ]
+  },
+  "social": {
+    "sectionLabel": "07",
+    "title": "Social",
+    "subtitle": "Instagram e TikTok: dietro le quinte e aggiornamenti.",
+    "links": [
+      {
+        "platform": "Instagram",
+        "handle": "@matteorizzi_11",
+        "description": "Allenamenti, partite e momenti dal viaggio in trasferta.",
+        "url": "https://www.instagram.com",
+        "ctaLabel": "Apri il profilo →"
+      },
+      {
+        "platform": "TikTok",
+        "handle": "@m.rizzi11",
+        "description": "Short verticali, drill e un po' di vita fuori dal parquet.",
+        "url": "https://www.tiktok.com",
+        "ctaLabel": "Apri il profilo →"
+      },
+      {
+        "platform": "Facebook",
+        "handle": "Pagina ufficiale",
+        "description": "Post, comunicazioni e spazio per la community che segue Matteo.",
+        "url": "https://www.facebook.com",
+        "ctaLabel": "Apri la pagina →"
+      }
+   
+    ]
+  },
+  "shop": {
+    "sectionLabel": "08",
+    "title": "Shop",
+    "subtitle": "Maglia ufficiale da gioco. Stesso numero, solo tua.",
+    "productName": "RIZZI",
+    "numberOnJersey": "11",
+    "price": "€ 89,00",
+    "features": [
+      "Tessuto tecnico traspirante premium",
+      "Patch olografica ufficiale gara",
+      "Possibilità di personalizzazione nome"
+    ],
+    "disclaimer": "Checkout non ancora attivo · prototipo UX",
+    "ctaLabel": "Aggiungi al carrello"
+    
+  },
+  "footer": {
+    "instagramUrl": "https://www.instagram.com",
+    "facebookUrl": "https://www.facebook.com"
+  }
+}
