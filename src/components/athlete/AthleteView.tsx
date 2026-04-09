@@ -220,7 +220,13 @@ export function AthleteView({ data }: Props) {
                 title={data.interviews.title}
                 subtitle={data.interviews.subtitle}
               />
-              <div className="mt-14">
+              <div
+                className={
+                  data.interviews.interviews.length === 1
+                    ? "mt-8 sm:mt-10"
+                    : "mt-14"
+                }
+              >
                 <VideoShelf
                   items={data.interviews.interviews.map((it) => ({
                     title: it.title,

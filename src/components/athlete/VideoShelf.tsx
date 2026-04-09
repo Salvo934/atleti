@@ -22,11 +22,26 @@ export function VideoShelf({ items }: Props) {
 
   const current = items[active];
   const embed = youtubeEmbedUrl(current.youtubeUrl);
+  const single = items.length === 1;
 
   return (
-    <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-6">
-      <div className="min-w-0 flex-1">
-        <div className="overflow-hidden rounded-2xl border border-white/[0.1] bg-black shadow-[0_24px_80px_-32px_rgba(0,0,0,0.85)] ring-1 ring-white/[0.06]">
+    <div
+      className={`flex flex-col lg:flex-row lg:items-start ${single ? "gap-3" : "gap-4 lg:gap-6"}`}
+    >
+      <div
+        className={
+          single
+            ? "mx-auto w-full max-w-xl sm:max-w-2xl"
+            : "min-w-0 flex-1"
+        }
+      >
+        <div
+          className={`overflow-hidden rounded-2xl border border-white/[0.1] bg-black ring-1 ring-white/[0.06] ${
+            single
+              ? "shadow-[0_16px_48px_-28px_rgba(0,0,0,0.75)]"
+              : "shadow-[0_24px_80px_-32px_rgba(0,0,0,0.85)]"
+          }`}
+        >
           {embed ? (
             <div className="aspect-video w-full">
               <iframe
@@ -45,8 +60,10 @@ export function VideoShelf({ items }: Props) {
             </div>
           )}
         </div>
-        <div className="mt-4 sm:mt-5">
-          <h4 className="font-display text-lg uppercase tracking-wide text-white sm:text-xl">
+        <div className={single ? "mt-3 sm:mt-4" : "mt-4 sm:mt-5"}>
+          <h4
+            className={`font-display uppercase tracking-wide text-white ${single ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`}
+          >
             {current.title}
           </h4>
           {current.caption ? (
@@ -56,7 +73,7 @@ export function VideoShelf({ items }: Props) {
             href={current.youtubeUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-accent transition hover:text-accent/85"
+            className={`inline-flex items-center gap-2 font-medium text-accent transition hover:text-accent/85 ${single ? "mt-2 text-sm" : "mt-3 text-sm"}`}
           >
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/15 text-xs">
               ▶
