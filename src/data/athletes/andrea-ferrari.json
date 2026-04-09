@@ -215,6 +215,16 @@
         "title": "Intervista su YouTube",
         "subtitle": "Guarda il video completo su YouTube.",
         "youtubeUrl": "https://www.youtube.com/watch?v=Zvu_SEi4XdU"
+      },
+      {
+        "title": "Intervista su YouTube",
+        "subtitle": "Guarda il video completo su YouTube.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Zvu_SEi4XdU"
+      },
+      {
+        "title": "Intervista su YouTube",
+        "subtitle": "Guarda il video completo su YouTube.",
+        "youtubeUrl": "https://www.youtube.com/watch?v=Zvu_SEi4XdU"
       }
     ]
   },
@@ -236,6 +246,13 @@
         "description": "Drill, momenti in palestra e qualche sorriso fuori dal parquet.",
         "url": "https://www.tiktok.com",
         "ctaLabel": "Apri il profilo →"
+      },
+      {
+        "platform": "Facebook",
+        "handle": "Pagina ufficiale",
+        "description": "Post, comunicazioni e spazio per la community che segue Andrea.",
+        "url": "https://www.facebook.com",
+        "ctaLabel": "Apri la pagina →"
       }
     ]
   },
