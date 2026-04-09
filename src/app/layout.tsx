@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Bebas_Neue, Inter, Oswald } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,6 +12,15 @@ const oswald = Oswald({
   weight: ["600", "700"],
   subsets: ["latin"],
   variable: "--font-nike",
+  display: "swap",
+  adjustFontFallback: true,
+});
+
+/** Poster street / 3×3 — titoli ad alto impatto (default tema Atleti). */
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-poster",
   display: "swap",
   adjustFontFallback: true,
 });
@@ -29,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="it"
-      className={`${inter.variable} ${oswald.variable} h-full antialiased`}
+      className={`${inter.variable} ${oswald.variable} ${bebasNeue.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[var(--background)] font-sans text-[var(--foreground)]">
         {children}

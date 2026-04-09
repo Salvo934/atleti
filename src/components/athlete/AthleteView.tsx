@@ -90,7 +90,7 @@ export function AthleteView({ data }: Props) {
 
   return (
     <div
-      className={`body-gradient flex min-h-screen flex-col font-sans text-white ${themeClass}`}
+      className={`body-gradient texture-grain flex min-h-screen flex-col font-sans text-white ${themeClass}`}
     >
       {data.intro ? (
         <IntroOverlay

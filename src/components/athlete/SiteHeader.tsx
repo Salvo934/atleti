@@ -22,8 +22,10 @@ function NavLink({
     <a
       href={`#${item.id}`}
       title={item.label}
-      className={`whitespace-nowrap text-[0.62rem] font-semibold uppercase tracking-[0.1em] transition sm:text-[0.68rem] ${
-        active ? "text-accent" : "text-white/45 hover:text-white"
+      className={`whitespace-nowrap rounded-full px-1.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.12em] transition sm:px-2.5 sm:text-[0.68rem] ${
+        active
+          ? "bg-white/[0.08] text-accent shadow-[0_0_0_1px_rgb(var(--accent-lime-rgb)/0.2)]"
+          : "text-white/45 hover:bg-white/[0.04] hover:text-white"
       }`}
     >
       {item.label}
@@ -99,8 +101,8 @@ export function SiteHeader({ name, number, avatarUrl, nav }: Props) {
       <header
         className={`sticky top-0 z-50 border-b transition-[background,box-shadow,border-color] duration-300 ${
           scrolled
-            ? "border-white/8 bg-[var(--background)]/85 shadow-[0_12px_40px_-16px_rgba(0,0,0,0.75)] backdrop-blur-xl backdrop-saturate-150"
-            : "border-transparent bg-[var(--background)]/90 backdrop-blur-md"
+            ? "border-white/[0.07] bg-[var(--background)]/82 shadow-[0_18px_50px_-20px_rgba(0,0,0,0.85)] backdrop-blur-2xl backdrop-saturate-150"
+            : "border-transparent bg-[var(--background)]/88 backdrop-blur-xl"
         }`}
       >
         <div
