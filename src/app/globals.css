@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Fallback — default Atleti: Apple × street × 3×3 */
+/* Fallback — default Atleti: Apple × street */
 :root {
   --background: #070708;
   --foreground: #fafafa;
@@ -26,7 +26,7 @@
   --font-display: var(--font-poster);
 }
 
-/* Atleti: Apple (vetro, ritmo) + street (lime, poster) + 3×3 (arancio energia) */
+/* Atleti: Apple (vetro, ritmo) + street (lime, poster, arancio) */
 .theme-atleti {
   --background: #070708;
   --foreground: #fafafa;
@@ -276,7 +276,7 @@ html {
   font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Ticker: fascia street / 3×3 */
+/* Ticker: fascia street */
 .ticker-surface {
   background: linear-gradient(
     90deg,

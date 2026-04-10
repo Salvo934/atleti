@@ -238,14 +238,9 @@ export function SiteHeader({ name, number, avatarUrl, nav }: Props) {
                     <Image src={avatarUrl} alt="" fill className="object-cover" sizes="44px" />
                   </div>
                   <div className="min-w-0">
-                    <div className="mb-0.5 flex flex-wrap items-center gap-2">
-                      <span className="rounded-md border border-[rgb(var(--accent-lime-rgb)/0.35)] bg-black/40 px-1.5 py-0.5 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-[var(--accent-lime)]">
-                        3×3
-                      </span>
-                      <span className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-white/35">
-                        Menu
-                      </span>
-                    </div>
+                    <p className="mb-0.5 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-white/35">
+                      Menu
+                    </p>
                     <p className="truncate font-display text-base font-normal uppercase leading-tight tracking-wide text-white">
                       {name}
                     </p>

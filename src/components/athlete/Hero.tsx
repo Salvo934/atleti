@@ -84,16 +84,7 @@ export function Hero({ hero, primaryCta, secondaryCta, spaciousBottom }: Props) 
             aria-hidden
           />
 
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:justify-start">
-            <span className="inline-flex items-center rounded-full border border-[rgb(var(--accent-lime-rgb)/0.35)] bg-black/45 px-2.5 py-1 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--accent-lime)] backdrop-blur-md">
-              3×3
-            </span>
-            <span className="text-[0.62rem] font-medium uppercase tracking-[0.32em] text-white/40">
-              Street
-            </span>
-          </div>
-
-          <p className="mt-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-accent sm:text-xs">
+          <p className="mt-1 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-accent sm:text-xs">
             {hero.tagline}
           </p>
 

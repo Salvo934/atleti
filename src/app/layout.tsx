@@ -16,7 +16,7 @@ const oswald = Oswald({
   adjustFontFallback: true,
 });
 
-/** Poster street / 3×3 — titoli ad alto impatto (default tema Atleti). */
+/** Poster street — titoli ad alto impatto (default tema Atleti). */
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],

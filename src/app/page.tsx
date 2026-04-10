@@ -12,7 +12,7 @@ export function generateMetadata(): Metadata {
   return {
     title: baseTitle,
     description:
-      "Indice atleti — JSON per scheda. Look Apple × street × basket 3×3, mobile first.",
+      "Indice atleti — JSON per scheda. Look Apple × street, mobile first.",
   };
 }
 
@@ -47,15 +47,10 @@ export default function HomePage() {
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
         <header className="max-w-2xl">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full border border-[rgb(var(--accent-lime-rgb)/0.35)] bg-black/45 px-2.5 py-1 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--accent-lime)]">
-              3×3
-            </span>
-            <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[var(--accent-blue)]">
-              Next.js · JSON
-            </p>
-          </div>
-          <h1 className="mt-5 font-display text-5xl font-normal uppercase leading-[0.95] tracking-[0.02em] text-[var(--foreground)] sm:text-6xl sm:tracking-[0.03em]">
+          <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[var(--accent-blue)]">
+            Next.js · JSON
+          </p>
+          <h1 className="mt-4 font-display text-5xl font-normal uppercase leading-[0.95] tracking-[0.02em] text-[var(--foreground)] sm:mt-5 sm:text-6xl sm:tracking-[0.03em]">
             Atleti
           </h1>
           <p className="mt-5 text-base leading-relaxed text-[var(--foreground)]/58 sm:text-lg">
