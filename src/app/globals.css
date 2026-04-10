@@ -184,6 +184,37 @@ html {
   }
 }
 
+@keyframes mobile-nav-backdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mobile-nav-panel {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobile-nav-item {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animate-marquee {
   animation: marquee 42s linear infinite;
 }
@@ -194,6 +225,26 @@ html {
 
 .animate-slide-up {
   animation: slide-up 0.45s ease-out both;
+}
+
+.animate-mobile-nav-backdrop {
+  animation: mobile-nav-backdrop 0.35s ease-out both;
+}
+
+.animate-mobile-nav-panel {
+  animation: mobile-nav-panel 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mobile-nav-item-enter {
+  animation: mobile-nav-item 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-mobile-nav-backdrop,
+  .animate-mobile-nav-panel,
+  .mobile-nav-item-enter {
+    animation: none;
+  }
 }
 
 .body-gradient {

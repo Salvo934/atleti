@@ -175,27 +175,29 @@ export function SiteHeader({ name, number, avatarUrl, nav }: Props) {
             <div className="absolute right-4 top-1/2 -translate-y-1/2 sm:right-6">
               <button
                 type="button"
-                className={`flex h-10 w-10 items-center justify-center text-white transition ${
-                  open ? "text-accent" : "text-white/90 hover:text-white"
+                className={`flex h-11 w-11 items-center justify-center rounded-xl border transition ${
+                  open
+                    ? "border-[rgb(var(--accent-lime-rgb)/0.45)] bg-white/[0.08] text-accent shadow-[0_0_0_1px_rgb(var(--accent-lime-rgb)/0.15)]"
+                    : "border-white/12 bg-white/[0.04] text-white/90 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] hover:border-white/20 hover:bg-white/[0.07]"
                 }`}
                 onClick={toggle}
                 aria-expanded={open}
                 aria-controls="mobile-nav"
                 aria-label={open ? "Chiudi menu" : "Apri menu"}
               >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
                   {open ? (
                     <path
                       d="M6 6l12 12M18 6L6 18"
                       stroke="currentColor"
-                      strokeWidth="1.75"
+                      strokeWidth="2"
                       strokeLinecap="round"
                     />
                   ) : (
                     <path
                       d="M4 7h16M4 12h16M4 17h16"
                       stroke="currentColor"
-                      strokeWidth="1.75"
+                      strokeWidth="2"
                       strokeLinecap="round"
                     />
                   )}
@@ -209,69 +211,124 @@ export function SiteHeader({ name, number, avatarUrl, nav }: Props) {
       {open && nav.length > 0 ? (
         <div
           id="mobile-nav"
-          className="fixed inset-0 z-[100] flex flex-col bg-[var(--background)] md:hidden"
-          style={{
-            paddingTop: "env(safe-area-inset-top, 0px)",
-            paddingBottom: "env(safe-area-inset-bottom, 0px)",
-          }}
+          className="fixed inset-0 z-[100] md:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Menu di navigazione"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_-10%,rgb(var(--accent-rgb)/0.1),transparent_55%)]" />
-          <div className="relative flex items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
-            <div className="flex min-w-0 items-center gap-3">
-              <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-1 ring-white/15">
-                <Image src={avatarUrl} alt="" fill className="object-cover" sizes="40px" />
+          <button
+            type="button"
+            className="animate-mobile-nav-backdrop absolute inset-0 bg-black/65 backdrop-blur-md"
+            onClick={close}
+            aria-label="Chiudi menu"
+          />
+
+          <div
+            className="pointer-events-none relative z-10 flex h-full flex-col p-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))]"
+          >
+            <div className="animate-mobile-nav-panel pointer-events-auto mx-auto flex min-h-0 w-full max-w-md flex-1 flex-col overflow-hidden rounded-3xl border border-white/[0.1] bg-[var(--background)]/88 shadow-[0_0_0_1px_rgb(var(--accent-lime-rgb)/0.08),0_32px_100px_-40px_rgba(0,0,0,0.95)] backdrop-blur-2xl">
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_100%_80%_at_50%_-20%,rgb(var(--accent-rgb)/0.12),transparent_50%)]"
+                aria-hidden
+              />
+
+              <div className="relative flex shrink-0 items-center justify-between gap-3 border-b border-white/[0.08] px-4 py-3.5">
+                <div className="flex min-w-0 flex-1 items-center gap-3">
+                  <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-2xl ring-1 ring-white/15 ring-offset-2 ring-offset-[var(--background)]">
+                    <Image src={avatarUrl} alt="" fill className="object-cover" sizes="44px" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="mb-0.5 flex flex-wrap items-center gap-2">
+                      <span className="rounded-md border border-[rgb(var(--accent-lime-rgb)/0.35)] bg-black/40 px-1.5 py-0.5 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-[var(--accent-lime)]">
+                        3×3
+                      </span>
+                      <span className="text-[0.62rem] font-medium uppercase tracking-[0.2em] text-white/35">
+                        Menu
+                      </span>
+                    </div>
+                    <p className="truncate font-display text-base font-normal uppercase leading-tight tracking-wide text-white">
+                      {name}
+                    </p>
+                    <p className="font-mono text-xs tabular-nums text-accent">#{number}</p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/12 bg-white/[0.06] text-white transition hover:border-[rgb(var(--accent-lime-rgb)/0.35)] hover:bg-white/[0.1] hover:text-[var(--accent-lime)]"
+                  onClick={close}
+                  aria-label="Chiudi menu"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path
+                      d="M6 6l12 12M18 6L6 18"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
               </div>
-              <div className="min-w-0">
-                <p className="truncate font-display text-sm font-bold uppercase tracking-wide text-white">
-                  {name}
+
+              <nav
+                className="relative min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 pb-4 pt-2"
+                aria-label="Menu principale mobile"
+              >
+                <ul className="flex flex-col gap-2">
+                  {nav.map((item, i) => {
+                    const active = activeId === item.id;
+                    const idx = String(i + 1).padStart(2, "0");
+                    return (
+                      <li
+                        key={item.id}
+                        className="mobile-nav-item-enter"
+                        style={{ animationDelay: `${i * 55}ms` }}
+                      >
+                        <a
+                          href={`#${item.id}`}
+                          title={item.label}
+                          onClick={close}
+                          className={`flex items-center gap-3 rounded-2xl border px-3.5 py-3.5 transition active:scale-[0.99] ${
+                            active
+                              ? "border-[rgb(var(--accent-lime-rgb)/0.45)] bg-white/[0.08] shadow-[0_0_0_1px_rgb(var(--accent-rgb)/0.25),0_12px_40px_-20px_rgb(var(--accent-rgb)/0.35)]"
+                              : "border-white/[0.07] bg-white/[0.03] hover:border-white/15 hover:bg-white/[0.06]"
+                          }`}
+                        >
+                          <span
+                            className={`font-mono text-xs tabular-nums ${
+                              active ? "text-[var(--accent-lime)]" : "text-white/35"
+                            }`}
+                          >
+                            {idx}
+                          </span>
+                          <span
+                            className={`min-w-0 flex-1 font-display text-base uppercase tracking-[0.06em] ${
+                              active ? "text-white" : "text-white/85"
+                            }`}
+                          >
+                            {item.label}
+                          </span>
+                          <span
+                            className={`shrink-0 text-lg leading-none ${
+                              active ? "text-accent" : "text-white/25"
+                            }`}
+                            aria-hidden
+                          >
+                            →
+                          </span>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+
+              <div className="relative shrink-0 border-t border-white/[0.06] px-4 py-3">
+                <p className="text-center text-[0.65rem] font-medium uppercase tracking-[0.2em] text-white/30">
+                  Scorri la pagina · sezioni
                 </p>
-                <p className="font-mono text-xs text-accent">#{number}</p>
               </div>
             </div>
-            <button
-              type="button"
-              className="flex h-10 w-10 shrink-0 items-center justify-center text-white transition hover:text-accent"
-              onClick={close}
-              aria-label="Chiudi menu"
-            >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path
-                  d="M6 6l12 12M18 6L6 18"
-                  stroke="currentColor"
-                  strokeWidth="1.75"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
           </div>
-
-          <nav
-            className="relative min-h-0 flex-1 overflow-y-auto px-4 pb-8 pt-6"
-            aria-label="Menu principale mobile"
-          >
-            <ul className="flex flex-col gap-1">
-              {nav.map((item) => {
-                const active = activeId === item.id;
-                return (
-                  <li key={item.id}>
-                    <a
-                      href={`#${item.id}`}
-                      title={item.label}
-                      onClick={close}
-                      className={`block py-3 text-sm font-semibold uppercase tracking-wide transition ${
-                        active ? "text-accent" : "text-white/75 hover:text-white"
-                      }`}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
         </div>
       ) : null}
     </>
