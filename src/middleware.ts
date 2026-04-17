@@ -15,11 +15,17 @@ function getRequestHost(request: NextRequest): string | null {
   return raw.split(":")[0]?.toLowerCase() ?? null;
 }
 
+/** `www.andreaferrari.katahero.com` → stesso slug di `andreaferrari.katahero.com` (un solo host in `site.hosts`). */
+function hostForSlugLookup(host: string): string {
+  if (host.startsWith("www.")) return host.slice(4);
+  return host;
+}
+
 export function middleware(request: NextRequest) {
   const host = getRequestHost(request);
   if (!host) return NextResponse.next();
 
-  const slug = hostToSlug[host];
+  const slug = hostToSlug[hostForSlugLookup(host)];
   if (!slug) return NextResponse.next();
 
   const { pathname } = request.nextUrl;

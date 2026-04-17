@@ -4,6 +4,6 @@
  */
 export const hostToSlug: Record<string, string> = {
   "andreaferrari.katahero.com": "andrea-ferrari",
-  "lucagreco.katahero.com": "luca-greco",
+  "marcoconti.katahero.com": "marco-conti",
   "matteorizzi.katahero.com": "matteo-rizzi",
 };
